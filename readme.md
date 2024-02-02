@@ -60,7 +60,8 @@ value, _ := cache.Get("key")
 value[0] = 9
 
 // The value in the cache is also modified
-fmt.Println(original)         // Prints: [9 2 3]
+fmt.Println(original)         // Prints: [1 2 3]
+fmt.Println(value)         // Prints: [9 2 3]
 fmt.Println(cache.Get("key")) // Prints: [9 2 3]
 ```
 
@@ -73,7 +74,7 @@ copy(copyOfValue, value)
 
 // Now you can modify copyOfValue without affecting the value in the cache
 ```
-
+ 
 ## Conclusion
 
 This is a basic in-memory cache implementation in Go. It's suitable for simple use cases where you need a temporary, in-memory storage of items for fast access. For more complex use cases, consider using a more feature-rich cache library or a dedicated cache server like Redis or Memcached.
